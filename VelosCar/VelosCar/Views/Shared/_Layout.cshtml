@@ -1,18 +1,35 @@
 ﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>@ViewBag.Title</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+<!-- saved from url=(0040)http://localhost:3000/productos/vigentes -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Velos-Car</title>
+    <link href="Content/reset.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="Content/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="Content/bootstrap-responsive.min.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="Content/main.css" media="screen" rel="stylesheet" type="text/css">
 </head>
-<body>
-    <p>Con git</p>
-    >
-    @RenderBody()
 
-    @Scripts.Render("~/bundles/jquery")
-    @RenderSection("scripts", required: false)
+<body>
+    <div class="navbar navbar-fixed-top">
+        @Html.Partial("partials/_Navbar")
+    </div>
+    
+    <div class="container-fluid">
+        <div class="row-fluid">                
+            <div class="span3">
+                @Html.Partial("partials/_Sidebar")
+            </div>
+            <div class="span9">
+                @RenderBody()
+            </div>
+
+        </div>
+
+        <hr>
+        <footer>
+            @Html.Partial("partials/_Footer")
+        </footer>            
+    </div>
+
 </body>
 </html>
