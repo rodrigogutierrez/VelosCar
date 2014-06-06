@@ -15,10 +15,9 @@ namespace VelosCar
 
             routes.MapRoute(
                 name: "raiz",
-                url: "",
+                url: "algo",
                 defaults: new { controller = "Home", action = "Index"},
                 constraints: new { httpMethod = new HttpMethodConstraint(new string[] { "GET" }) }
             );
         }
     }
-}
