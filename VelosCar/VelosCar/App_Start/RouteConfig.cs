@@ -62,8 +62,6 @@ namespace VelosCar
             //rutas de la reserva
             //rutas de las tarifas
             //rutas de las sucursales
-            //rutas de los informes
-
             
         }
     }
