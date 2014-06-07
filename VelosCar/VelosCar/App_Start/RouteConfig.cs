@@ -370,7 +370,11 @@ namespace VelosCar
 
             //rutas de las tarifas
             //rutas de las sucursales
+<<<<<<< HEAD
             //rutas de los informes estadisticos
+=======
+            //rutas de los informes
+>>>>>>> 7570b149b19122c2b7be23d5004afd768dd30f69
 
         }
     }

@@ -126,7 +126,18 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccesorioController.cs" />
+    <Compile Include="Controllers\CombustibleController.cs" />
+    <Compile Include="Controllers\EquipamientoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InformeController.cs" />
+    <Compile Include="Controllers\MarcaVehiculoController.cs" />
+    <Compile Include="Controllers\ReservaController.cs" />
+    <Compile Include="Controllers\SucursalController.cs" />
+    <Compile Include="Controllers\TarifaController.cs" />
+    <Compile Include="Controllers\TipoVehiculoController.cs" />
+    <Compile Include="Controllers\UsuarioController.cs" />
+    <Compile Include="Controllers\VehiculoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
