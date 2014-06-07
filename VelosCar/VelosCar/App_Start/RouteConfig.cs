@@ -369,6 +369,54 @@ namespace VelosCar
             );
 
             //rutas de las tarifas
+            //listar tarifas
+            routes.MapRoute(
+                name: "tarifas",
+                url: "tarifas",
+                defaults: new { controller = "Tarifa", action = "Index" },
+                constraints: new { httpMethod = new HttpMethodConstraint(new string[] { "GET" }) }
+            );
+
+            //registrar tarifas
+            routes.MapRoute(
+                name: "registrar_tarifa",
+                url: "tarifas/registrar",
+                defaults: new { controller = "Tarifa", action = "Registrar" },
+                constraints: new { httpMethod = new HttpMethodConstraint(new string[] { "GET" }) }
+            );
+
+            //crear tarifas
+            routes.MapRoute(
+                name: "crear_tarifa",
+                url: "tarifas/crear",
+                defaults: new { controller = "Tarifa", action = "Crear" },
+                constraints: new { httpMethod = new HttpMethodConstraint(new string[] { "POST" }) }
+            );
+
+            //crear tarifas
+            routes.MapRoute(
+                name: "editar_tarifa",
+                url: "tarifas/{id}/editar",
+                defaults: new { controller = "Tarifa", action = "Editar" },
+                constraints: new { httpMethod = new HttpMethodConstraint(new string[] { "GET" }) }
+            );
+
+            //actualizar tarifas
+            routes.MapRoute(
+                name: "actualizar_tarifa",
+                url: "tarifas/{id}",
+                defaults: new { controller = "Tarifa", action = "Crear" },
+                constraints: new { httpMethod = new HttpMethodConstraint(new string[] { "POST" }) }
+            );
+
+            //ver tarifas
+            routes.MapRoute(
+                name: "ver_tarifa",
+                url: "tarifas/{id}",
+                defaults: new { controller = "Tarifa", action = "Ver" },
+                constraints: new { httpMethod = new HttpMethodConstraint(new string[] { "POST" }) }
+            );
+
             //rutas de las sucursales
 <<<<<<< HEAD
             //rutas de los informes estadisticos
