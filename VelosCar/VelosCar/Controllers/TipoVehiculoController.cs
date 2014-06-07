@@ -6,10 +6,10 @@ using System.Web.Mvc;
 
 namespace VelosCar.Controllers
 {
-    public class VehiculoController : Controller
+    public class TipoVehiculoController : Controller
     {
         //
-        // GET: /Vehiculo/
+        // GET: /TipoVehiculo/
 
         public ActionResult Index()
         {

@@ -6,10 +6,10 @@ using System.Web.Mvc;
 
 namespace VelosCar.Controllers
 {
-    public class VehiculoController : Controller
+    public class EquipamientoController : Controller
     {
         //
-        // GET: /Vehiculo/
+        // GET: /Equipamiento/
 
         public ActionResult Index()
         {
@@ -40,5 +40,6 @@ namespace VelosCar.Controllers
         {
             return View();
         }
+
     }
 }
