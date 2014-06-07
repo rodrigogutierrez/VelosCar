@@ -21,10 +21,11 @@ namespace VelosCar.Controllers
             return View();
         }
 
-        public ActionResult Ver()
+        public ActionResult Ver(int d)
         {
             return View();
         }
+
 
     }
 }
