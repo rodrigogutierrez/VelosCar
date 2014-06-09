@@ -141,6 +141,17 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Accesorio.cs" />
+    <Compile Include="Models\Combustible.cs" />
+    <Compile Include="Models\Equipamiento.cs" />
+    <Compile Include="Models\Marca.cs" />
+    <Compile Include="Models\Reserva.cs" />
+    <Compile Include="Models\Sucursal.cs" />
+    <Compile Include="Models\Tarifa.cs" />
+    <Compile Include="Models\TipoVehiculo.cs" />
+    <Compile Include="Models\Usuario.cs" />
+    <Compile Include="Models\Vehiculo.cs" />
+    <Compile Include="Models\VelosCarContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -238,7 +249,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
