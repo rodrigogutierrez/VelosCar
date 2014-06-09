@@ -12,11 +12,12 @@
 #top-navbar .form-group input{
 	display: block;
 	width: auto;
+    margin: 0 5px;
 }
 #top-navbar .glyphicon{
 	font-size: 2em;
 	top: 5px;
-	right: 5px;
+    right: 5px;
 }
 .input-group{
 	margin-bottom: 5px;
