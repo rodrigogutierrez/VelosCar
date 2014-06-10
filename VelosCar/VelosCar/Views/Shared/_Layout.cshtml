@@ -6,30 +6,35 @@
     <link href="Content/reset.css" media="screen" rel="stylesheet" type="text/css">
     <link href="Content/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css">
     <link href="Content/bootstrap-responsive.min.css" media="screen" rel="stylesheet" type="text/css">
-    <link href="Content/main.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="Content/styles.css" rel="stylesheet">
 </head>
 
 <body>
-    <div class="navbar navbar-fixed-top">
+    <nav id="top-navbar" class="navbar navbar-default">
         @Html.Partial("partials/_Navbar")
-    </div>
+    </nav>
     
-    <div class="container-fluid">
-        <div class="row-fluid">                
-            <div class="span3">
-                @Html.Partial("partials/_Sidebar")
-            </div>
-            <div class="span9">
-                @RenderBody()
-            </div>
-
-        </div>
-
-        <hr>
-        <footer>
-            @Html.Partial("partials/_Footer")
-        </footer>            
+    <div class="page-header">
+        @Html.Partial("partials/_Header")
     </div>
 
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          @RenderBody()
+        </div>
+      </div>
+  
+      <hr>
+
+    </div> <!-- /container -->
+        
+    <footer class="jumbotron text-center">
+        @Html.Partial("partials/_Footer")
+    </footer>
+    <!-- script references -->
+		<script src="Scripts/jquery.min.js"></script>
+		<script src="Scripts/bootstrap.min.js"></script>
+		<script src="Scripts/scripts.js"></script>
 </body>
 </html>
