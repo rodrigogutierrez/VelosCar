@@ -15,7 +15,8 @@ namespace VelosCar.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            var usuario = _db.Usuarios.ToList();
+            return View(usuario);
         }
 
         public ActionResult Registrar()
@@ -23,24 +24,42 @@ namespace VelosCar.Controllers
             return View();
         }
 
-        public ActionResult Crear()
+        public ActionResult Crear(Usuario u)
         {
-            return View();
+            if (ModelState.IsValid)
+            {
+                _db.Usuarios.Add(u);
+                _db.SaveChanges();
+
+                return RedirectToRoute("usuarios");
+            }
+
+            return RedirectToRoute("editar_usuario");
         }
 
-        public ActionResult Editar()
+        public ActionResult Editar(int id)
         {
-            return View();
+            Usuario u = _db.Usuarios.Find(id);
+            return View(u);
         }
 
-        public ActionResult Actualizar()
+        public ActionResult Actualizar(int id, Usuario u)
         {
-            return View();
+            if (ModelState.IsValid)
+            {
+                _db.Entry(u).State = System.Data.EntityState.Modified;
+                _db.SaveChanges();
+
+                return RedirectToRoute("ver_usuario", new { id = id });
+            }
+
+            return RedirectToRoute("editar_usuario", new { id = id });
         }
 
-        public ActionResult Ver()
+        public ActionResult Ver(int id)
         {
-            return View();
+            Usuario u = _db.Usuarios.Find(id);
+            return View(u);
         }
 
     }

@@ -24,24 +24,41 @@ namespace VelosCar.Controllers
             return View();
         }
 
-        public ActionResult Crear()
+        public ActionResult Crear(Vehiculo v)
         {
+            if (ModelState.IsValid)
+            {
+                _db.Vehiculos.Add(v);
+                _db.SaveChanges();
+
+                return RedirectToRoute("vehiculos");
+            }
+            return RedirectToRoute("registrar_vehiculo");
+        }
+
+        public ActionResult Editar(int id)
+        {
+            Vehiculo v = _db.Vehiculos.Find(id);
             return View();
         }
 
-        public ActionResult Editar()
+        public ActionResult Actualizar(int id, Vehiculo v)
         {
-            return View();
+            if (ModelState.IsValid)
+            {
+                _db.Entry(v).State = System.Data.EntityState.Modified;
+                _db.SaveChanges();
+
+                return RedirectToRoute("ver_vehiculo", new { id = id });
+            }
+
+            return RedirectToRoute("editar_vehiculo", new { id = id });
         }
 
-        public ActionResult Actualizar()
+        public ActionResult Ver(int id)
         {
-            return View();
-        }
-
-        public ActionResult Ver()
-        {
-            return View();
+            Vehiculo v = _db.Vehiculos.Find(id);
+            return View(v);
         }
     }
 }
