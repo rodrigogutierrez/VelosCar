@@ -16,6 +16,11 @@ namespace VelosCar.Controllers
             return View();
         }
 
+        public ActionResult Registrar()
+        {
+            return View();
+        }
+
         public ActionResult Crear()
         {
             return View();
@@ -27,11 +32,6 @@ namespace VelosCar.Controllers
         }
 
         public ActionResult Actualizar()
-        {
-            return View();
-        }
-
-        public ActionResult Nuevo()
         {
             return View();
         }

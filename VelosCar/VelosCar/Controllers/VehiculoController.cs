@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using VelosCar.Models;
 
 namespace VelosCar.Controllers
 {
@@ -10,8 +11,15 @@ namespace VelosCar.Controllers
     {
         //
         // GET: /Vehiculo/
+        VelosCarContext _db = new VelosCarContext();
 
         public ActionResult Index()
+        {
+            var vehiculo = _db.Vehiculos.ToList();
+            return View(vehiculo);
+        }
+
+        public ActionResult Registrar()
         {
             return View();
         }
@@ -27,11 +35,6 @@ namespace VelosCar.Controllers
         }
 
         public ActionResult Actualizar()
-        {
-            return View();
-        }
-
-        public ActionResult Nuevo()
         {
             return View();
         }
