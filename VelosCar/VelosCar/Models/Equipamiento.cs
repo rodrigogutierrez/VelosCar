@@ -19,9 +19,11 @@ namespace VelosCar.Models
         public string Estado { get; set; }
 
         [Required]
-        public int IdVehiculo { get; set; }
+        public int VehiculoId { get; set; }
 
         [Required]
-        public int IdAccesorio { get; set; }
+        public int AccesorioId { get; set; }
+
+        public virtual Accesorio Accesorio { get; set; }
     }
 }
