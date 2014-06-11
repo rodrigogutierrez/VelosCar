@@ -1,17 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
 namespace VelosCar.Models
 {
+    [Table("TiposVehiculos")]
     public class TipoVehiculo
     {
         public int id { get; set; }
-        public string Nombre { get; set; }
-        public int Valor { get; set; }
 
-        //declaracion de la relacion entre la tarifa y el vehiculo
+        [Required]
+        public string Nombre { get; set; }
+
+        //declaracion de la relacion entre el tipovehiculo y el vehiculo
         public virtual ICollection<Vehiculo> Vehiculos { get; set; }
     }
 }
