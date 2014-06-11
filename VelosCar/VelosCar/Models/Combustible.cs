@@ -15,5 +15,7 @@ namespace VelosCar.Models
         [Required]
         public string Nombre { get; set; }
 
+        public virtual ICollection<Vehiculo> Vehiculos { get; set; }
+
     }
 }
