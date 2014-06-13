@@ -31,7 +31,7 @@ namespace VelosCar.Controllers
             return View();
         }
 
-        public ActionResult Nuevo()
+        public ActionResult Registrar()
         {
             return View();
         }

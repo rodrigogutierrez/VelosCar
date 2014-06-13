@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using VelosCar.Models;
 
 namespace VelosCar.Controllers
 {
@@ -10,35 +11,55 @@ namespace VelosCar.Controllers
     {
         //
         // GET: /MarcaVehiculo/
+        VelosCarContext _db = new VelosCarContext();
 
         public ActionResult Index()
         {
-            return View();
+            var marcas = _db.Marcas.ToList();
+            return View(marcas);
         }
 
-        public ActionResult Crear()
+        public ActionResult Crear(Marca m)
+        {
+            if (ModelState.IsValid)
+            {
+                _db.Marcas.Add(m);
+                _db.SaveChanges();
+
+                return RedirectToRoute("marcas");
+            }
+
+            return RedirectToRoute("registrar_marca");
+        }
+
+        public ActionResult Editar(int id)
+        {
+            Marca m = _db.Marcas.Find(id);
+            return View(m);
+        }
+
+        public ActionResult Actualizar(int id, Marca m)
+        {
+            if (ModelState.IsValid)
+            {
+                _db.Entry(m).State = System.Data.EntityState.Modified;
+                _db.SaveChanges();
+
+                return RedirectToRoute("ver_marca", new { id = id });
+            }
+
+            return RedirectToRoute("editar_marca", new { id = id });
+        }
+
+        public ActionResult Registrar()
         {
             return View();
         }
 
-        public ActionResult Editar()
+        public ActionResult Ver(int id)
         {
-            return View();
-        }
-
-        public ActionResult Actualizar()
-        {
-            return View();
-        }
-
-        public ActionResult Nuevo()
-        {
-            return View();
-        }
-
-        public ActionResult Ver()
-        {
-            return View();
+            Marca m = _db.Marcas.Find(id);
+            return View(m);
         }
 
     }

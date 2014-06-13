@@ -58,7 +58,7 @@ namespace VelosCar
             routes.MapRoute(
                 name: "actualizar_vehiculo",
                 url: "vehiculos/{id}",
-                defaults: new { controller = "Vehiculo", action = "Ver" },
+                defaults: new { controller = "Vehiculo", action = "Actualizar" },
                 constraints: new { httpMethod = new HttpMethodConstraint(new string[] { "POST" }) }
             );
 
