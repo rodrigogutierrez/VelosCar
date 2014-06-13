@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using VelosCar.Models;
 
 namespace VelosCar.Controllers
 {
@@ -10,35 +11,55 @@ namespace VelosCar.Controllers
     {
         //
         // GET: /Usuario/
+        VelosCarContext _db = new VelosCarContext();
 
         public ActionResult Index()
         {
-            return View();
+            var usuario = _db.Usuarios.ToList();
+            return View(usuario);
         }
 
-        public ActionResult Crear()
+        public ActionResult Registrar()
         {
             return View();
         }
 
-        public ActionResult Editar()
+        public ActionResult Crear(Usuario u)
         {
-            return View();
+            if (ModelState.IsValid)
+            {
+                _db.Usuarios.Add(u);
+                _db.SaveChanges();
+
+                return RedirectToRoute("usuarios");
+            }
+
+            return RedirectToRoute("editar_usuario");
         }
 
-        public ActionResult Actualizar()
+        public ActionResult Editar(int id)
         {
-            return View();
+            Usuario u = _db.Usuarios.Find(id);
+            return View(u);
         }
 
-        public ActionResult Nuevo()
+        public ActionResult Actualizar(int id, Usuario u)
         {
-            return View();
+            if (ModelState.IsValid)
+            {
+                _db.Entry(u).State = System.Data.EntityState.Modified;
+                _db.SaveChanges();
+
+                return RedirectToRoute("ver_usuario", new { id = id });
+            }
+
+            return RedirectToRoute("editar_usuario", new { id = id });
         }
 
-        public ActionResult Ver()
+        public ActionResult Ver(int id)
         {
-            return View();
+            Usuario u = _db.Usuarios.Find(id);
+            return View(u);
         }
 
     }

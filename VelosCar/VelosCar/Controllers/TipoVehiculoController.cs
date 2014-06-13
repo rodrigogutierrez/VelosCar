@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using VelosCar.Models;
 
 namespace VelosCar.Controllers
 {
@@ -10,35 +11,55 @@ namespace VelosCar.Controllers
     {
         //
         // GET: /TipoVehiculo/
+        VelosCarContext _db = new VelosCarContext();
 
         public ActionResult Index()
         {
-            return View();
+            var tipos = _db.TiposVehiculo.ToList();
+            return View(tipos);
         }
 
-        public ActionResult Crear()
+        public ActionResult Registrar()
         {
             return View();
         }
 
-        public ActionResult Editar()
+        public ActionResult Crear(TipoVehiculo t)
         {
-            return View();
+            if (ModelState.IsValid)
+            {
+                _db.TiposVehiculo.Add(t);
+                _db.SaveChanges();
+
+                return RedirectToRoute("tipos_vehiculo");
+            }
+
+            return RedirectToRoute("registrar_tipo_vehiculo");
         }
 
-        public ActionResult Actualizar()
+        public ActionResult Editar(int id)
         {
-            return View();
+            TipoVehiculo t = _db.TiposVehiculo.Find(id);
+            return View(t);
         }
 
-        public ActionResult Nuevo()
+        public ActionResult Actualizar(int id, TipoVehiculo t)
         {
-            return View();
+            if (ModelState.IsValid)
+            {
+                _db.Entry(t).State = System.Data.EntityState.Modified;
+                _db.SaveChanges();
+
+                return RedirectToRoute("ver_tipo_vehiculo", new { id = id });
+            }
+
+            return RedirectToRoute("editar_tipo_vehiculo", new { id = id });
         }
 
-        public ActionResult Ver()
+        public ActionResult Ver(int id)
         {
-            return View();
+            TipoVehiculo t = _db.TiposVehiculo.Find(id);
+            return View(t);
         }
     }
 }
