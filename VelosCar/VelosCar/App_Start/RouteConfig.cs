@@ -182,7 +182,7 @@ namespace VelosCar
             routes.MapRoute(
                 name: "registrar_accesorio",
                 url: "accesorios/registrar",
-                defaults: new { controller = "Accesorio", action = "Index" },
+                defaults: new { controller = "Accesorio", action = "Registrar" },
                 constraints: new { httpMethod = new HttpMethodConstraint(new string[] { "GET" }) }
             );
 
