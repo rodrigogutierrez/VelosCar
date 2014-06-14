@@ -16,6 +16,6 @@ namespace VelosCar.Models
         public string Nombre { get; set; }
 
         //declaracion de la relacion entre la marca y el vehiculo
-        public virtual ICollection<Vehiculo> Vehiculos { get; set; }
+        //public virtual ICollection<Vehiculo> Vehiculos { get; set; }
     }
 }
