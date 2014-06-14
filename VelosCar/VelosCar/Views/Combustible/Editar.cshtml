@@ -1,0 +1,17 @@
+﻿@model VelosCar.Models.Combustible
+
+<div class="row">
+    <div class="col-lg-6 col-lg-offset-3">
+        <form class="form-horizontal" method="post" action="@Url.RouteUrl("actualizar_combustible", new { id = Model.Id })">
+            <input type="hidden" name="Id" value=" " />
+        <div class="input-group bg">
+            <span class="input-group-addon">Nombre</span>
+            <input type="text" class="form-control bg" name="Nombre" value="@Model.Id">
+        </div><!--Fin input-group-->
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Registrar</button>
+            <button type="reset" class="btn">Limpiar</button>
+        </div>
+        </form><!--Fin form--> 
+    </div>
+</div><!--Fin row-->
