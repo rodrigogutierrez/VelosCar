@@ -1,0 +1,67 @@
+﻿<div class="row">
+    <div class="col-lg-6 col-lg-offset-3">
+        <div class="input-group bg">
+            <span class="input-group-addon">Nombre</span>
+            <input type="text" class="form-control bg" name="Nombre" value="@Model.Id" disabled="disabled">
+        </div><!--Fin input-group-->
+    </div>
+    <div class="row">
+    <div class="col-lg-12">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nombre</th>
+                        <th>Opciones</th>
+                    </tr>
+                </thead>
+                <tbody id="myTable">
+                    @foreach (var item in ViewBag.vehiculos)
+                    {
+                       <tr>
+                           <td>@item.Id</td>
+                           <td>@item.Patente</td>
+                           <td>@item.Modelo</td>
+                           <td>@item.Color</td>
+                           <td>@item.Anio</td>
+                           <td>@item.CantidadPuertas</td>
+                           <td>@item.CantidadPasajeros</td>
+                           <td>@item.Cilindrada</td>
+                           <td>@item.FrenosAbs</td>
+                           <td>@item.AirbagLaterales</td>
+                           <td>@item.AirbagFrontales</td>
+                           <td>@item.Marca</td>
+                            <td>
+                                <a href="#">Ver</a>
+                                <a href="#">Editar</a>
+                                <a href="#">Vehiculos</a>
+                            </td>
+                        </tr>   
+                    }
+                    <tr>
+                        <td>1</td>
+                        <td>Bencina</td>
+                        <td>
+                            <a href="#" title="Detalle Combustible"><span class="glyphicon glyphicon-eye-open"></span></a>
+                            <a href="#" title="Editar Combustible"><span class="glyphicon glyphicon-edit"></a>
+                            <a href="#" title="Vehiculos"><span class="glyphicon glyphicon-road"></a>
+                        </td>
+                    </tr>   
+                    <tr>
+                        <td>2</td>
+                        <td>Petróleo</td>
+                        <td>
+                            <a href="#" title="Detalle Combustible"><span class="glyphicon glyphicon-eye-open"></span></a>
+                            <a href="#" title="Editar Combustible"><span class="glyphicon glyphicon-edit"></a>
+                            <a href="#" title="Vehiculos"><span class="glyphicon glyphicon-road"></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>   
+        </div>
+        <div class="col-md-12 text-center">
+            <ul class="pagination" id="myPager"></ul>
+        </div>
+    </div>
+</div><!--Fin row-->
