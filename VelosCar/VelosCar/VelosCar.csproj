@@ -157,8 +157,6 @@
   <ItemGroup>
     <Content Include="Content\bootstrap-responsive.min.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\img\3.jpg" />
-    <Content Include="Content\img\3_th.jpg" />
     <Content Include="Content\main.css" />
     <Content Include="Content\reset.css" />
     <Content Include="Content\styles.css" />
@@ -258,8 +256,7 @@
     <Content Include="Views\Shared\partials\_Header.cshtml" />
     <Content Include="Views\Accesorio\Index.cshtml" />
     <Content Include="Views\Accesorio\Registrar.cshtml" />
-    <Content Include="Views\Vehiculo\Index.cshtml" />
-    <Content Include="Views\Vehiculo\Ver.cshtml" />
+    <Content Include="Views\Combustible\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
