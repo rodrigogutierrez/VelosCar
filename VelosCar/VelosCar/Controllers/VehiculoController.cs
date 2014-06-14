@@ -15,7 +15,6 @@ namespace VelosCar.Controllers
 
         public ActionResult Index()
         {
-            ViewBag.indice = 1;
             var vehiculo = _db.Vehiculos.ToList();
             return View(vehiculo);
         }

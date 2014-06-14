@@ -6,6 +6,10 @@
 .left{
     float: left;
 }
+.right {
+    float: right;
+}
+
 #top-navbar .dropdown-toggle{
 	/*min-width: 180px;*/
 }
