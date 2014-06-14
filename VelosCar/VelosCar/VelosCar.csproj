@@ -257,6 +257,8 @@
     <Content Include="Views\Accesorio\Index.cshtml" />
     <Content Include="Views\Accesorio\Registrar.cshtml" />
     <Content Include="Views\Combustible\Index.cshtml" />
+    <Content Include="Views\Vehiculo\Ver.cshtml" />
+    <Content Include="Views\Vehiculo\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
