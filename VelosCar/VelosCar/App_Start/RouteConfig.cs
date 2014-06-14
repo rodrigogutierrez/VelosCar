@@ -131,7 +131,7 @@ namespace VelosCar
 
             //registrar combustibles
             routes.MapRoute(
-                name: "registrar_combustibles",
+                name: "registrar_combustible",
                 url: "combustibles/registrar",
                 defaults: new { controller = "Combustible", action = "Registrar" },
                 constraints: new { httpMethod = new HttpMethodConstraint(new string[] { "GET" }) }
@@ -139,7 +139,7 @@ namespace VelosCar
 
             //Crear combustibles
             routes.MapRoute(
-                name: "crear_combustibles",
+                name: "crear_combustible",
                 url: "combustibles/crear",
                 defaults: new { controller = "Combustible", action = "Crear" },
                 constraints: new { httpMethod = new HttpMethodConstraint(new string[] { "POST" }) }
@@ -147,15 +147,23 @@ namespace VelosCar
 
             //editar combustibles
             routes.MapRoute(
-                name: "editar_combustibles",
+                name: "editar_combustible",
                 url: "combustibles/{id}/editar",
-                defaults: new { controller = "Combustible", action = "Crear" },
+                defaults: new { controller = "Combustible", action = "Editar" },
+                constraints: new { httpMethod = new HttpMethodConstraint(new string[] { "GET" }) }
+            );
+
+            //editar combustibles
+            routes.MapRoute(
+                name: "vehiculos_combustible",
+                url: "combustibles/{id}/vehiculos",
+                defaults: new { controller = "Combustible", action = "VerVehiculos" },
                 constraints: new { httpMethod = new HttpMethodConstraint(new string[] { "GET" }) }
             );
 
             //actualizar combustibles
             routes.MapRoute(
-                name: "actualizar_combustibles",
+                name: "actualizar_combustible",
                 url: "combustibles/{id}",
                 defaults: new { controller = "Combustible", action = "Actualizar" },
                 constraints: new { httpMethod = new HttpMethodConstraint(new string[] { "POST" }) }
@@ -163,7 +171,7 @@ namespace VelosCar
 
             //ver combustibles
             routes.MapRoute(
-                name: "ver_combustibles",
+                name: "ver_combustible",
                 url: "combustibles/{id}",
                 defaults: new { controller = "Combustible", action = "Ver" },
                 constraints: new { httpMethod = new HttpMethodConstraint(new string[] { "GET" }) }

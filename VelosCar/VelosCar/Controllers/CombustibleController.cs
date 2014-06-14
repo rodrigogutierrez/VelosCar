@@ -61,5 +61,15 @@ namespace VelosCar.Controllers
             Combustible c = _db.Combustibles.Find(id);
             return View(c);
         }
+
+        public ActionResult VerVehiculos(int id)
+        {
+            Combustible c = _db.Combustibles.Find(id);
+            var vehiculos = (from v in _db.Vehiculos
+                             where v.CombustibleId == id
+                             select v).ToList();
+            ViewBag.vehiculos = vehiculos;
+            return View(c);
+        }
     }
 }
