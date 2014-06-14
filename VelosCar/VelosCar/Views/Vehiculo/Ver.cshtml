@@ -1,0 +1,43 @@
+﻿@model VelosCar.Models.Vehiculo
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-2">
+        <img src="@Model.RutaImagen" alt="Imagen del auto" />
+    </div>
+    
+    <div class="col-lg-10">
+        <form class="vehiculo form-horizontal">
+            <fieldset>
+                <div class="control-group">
+                    <label class="control-label">Marca:</label>
+                    <div class="controls">
+                        <input class="input-xlarge" type="text" value="@Model.Marca" disabled>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">Modelo:</label>
+                    <div class="controls">
+                        <input class="input-xlarge" type="text" value="@Model.Modelo" disabled>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">Color:</label>
+                    <div class="controls">
+                        <input class="input-xlarge" type="color" value="" >
+                    </div>
+                </div>      
+                <div class="control-group">
+                    <label class="control-label">Año:</label>
+                    <div class="controls">
+                        <input class="input-xlarge" type="text" value="@Model.Anio" disabled> 
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+  </div>
+  
+  <hr>
+
+</div> <!-- /container -->

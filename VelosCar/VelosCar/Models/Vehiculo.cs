@@ -15,6 +15,9 @@ namespace VelosCar.Models
         [Required]
         [StringLength(6, MinimumLength=6)]
         public string Patente { get; set; }
+
+        [Required]
+        public string Marca { get; set; }
         
         [Required]
         public string Modelo { get; set; }
@@ -42,10 +45,13 @@ namespace VelosCar.Models
 
         [Required]
         public bool AirbagFrontales { get; set; }
+
+        [Required]
+        public string RutaImagen { get; set; }
         
         //declaracion de la relacion entre vehiculo y marca
-        public int MarcaId { get; set; }
-        public virtual Marca Marca { get; set; }
+        //public int MarcaId { get; set; }
+        //public virtual Marca Marca { get; set; }
 
         //declaracion de la relacion entre vehiculo y tipovehiculo
         public int TipoVehiculoId { get; set; }

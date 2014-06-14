@@ -141,6 +141,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201406130134068_InitialCreate.cs" />
+    <Compile Include="Migrations\201406130134068_InitialCreate.Designer.cs">
+      <DependentUpon>201406130134068_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Accesorio.cs" />
     <Compile Include="Models\Combustible.cs" />
     <Compile Include="Models\Equipamiento.cs" />
@@ -254,12 +259,19 @@
     <Content Include="Views\Shared\partials\_Footer.cshtml" />
     <Content Include="Views\Shared\partials\_Navbar.cshtml" />
     <Content Include="Views\Shared\partials\_Header.cshtml" />
+    <Content Include="Views\Vehiculo\Index.cshtml" />
+    <Content Include="Views\Vehiculo\Ver.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201406130134068_InitialCreate.resx">
+      <DependentUpon>201406130134068_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
