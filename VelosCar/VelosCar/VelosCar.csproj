@@ -254,6 +254,13 @@
     <Content Include="Views\Shared\partials\_Footer.cshtml" />
     <Content Include="Views\Shared\partials\_Navbar.cshtml" />
     <Content Include="Views\Shared\partials\_Header.cshtml" />
+    <Content Include="Views\Accesorio\Index.cshtml" />
+    <Content Include="Views\Accesorio\Registrar.cshtml" />
+    <Content Include="Views\Combustible\Index.cshtml" />
+    <Content Include="Views\Combustible\VerVehiculos.cshtml" />
+    <Content Include="Views\Combustible\Ver.cshtml" />
+    <Content Include="Views\Combustible\Registrar.cshtml" />
+    <Content Include="Views\Combustible\Editar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

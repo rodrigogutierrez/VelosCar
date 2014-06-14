@@ -7,15 +7,18 @@ using System.Web;
 
 namespace VelosCar.Models
 {
-    [Table("Marcas")]
-    public class Marca
+    [Table("Tarifas")]
+    public class Tarifa
     {
         public int Id { get; set; }
 
         [Required]
         public string Nombre { get; set; }
 
-        //declaracion de la relacion entre la marca y el vehiculo
-        //public virtual ICollection<Vehiculo> Vehiculos { get; set; }
+        [Required]
+        public int Valor { get; set; }
+
+        //declaracion de la relacion entre la tarifa y el vehiculo
+        public virtual ICollection<Vehiculo> Vehiculos { get; set; }
     }
 }
