@@ -1,0 +1,40 @@
+﻿@model IEnumerable<VelosCar.Models.Accesorio>
+
+<div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="table-responsive">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Nombre</th>
+                  <th>Valor</th>
+                </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                        <td>1</td>
+                        <td>Nombre</td>
+                        <td>Valor</td>
+                    </tr>
+                  @foreach (var item in Model)
+                  {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Nombre</td>
+                        <td>@item.Valor</td>
+                    </tr>
+                  }
+                
+              </tbody>
+            </table>   
+          </div>
+          <div class="col-md-12 text-center">
+            <ul class="pagination" id="myPager"></ul>
+          </div>
+        </div>
+      </div>
+</div> <!-- /container -->
+	</body>
+</html>
