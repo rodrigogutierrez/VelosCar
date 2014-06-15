@@ -1,8 +1,9 @@
-﻿<div class="row">
+﻿@model VelosCar.Models.Combustible
+<div class="row">
     <div class="col-lg-6 col-lg-offset-3">
         <div class="input-group bg">
             <span class="input-group-addon">Nombre</span>
-            <input type="text" class="form-control bg" name="Nombre" value="@Model.Id" disabled="disabled">
+            <input type="text" class="form-control bg" name="Nombre" value="@Model.Nombre" disabled="disabled">
         </div><!--Fin input-group-->
     </div>
     <div class="row">
@@ -32,31 +33,13 @@
                            <td>@item.AirbagLaterales</td>
                            <td>@item.AirbagFrontales</td>
                            <td>@item.Marca</td>
-                            <td>
-                                <a href="#">Ver</a>
-                                <a href="#">Editar</a>
-                                <a href="#">Vehiculos</a>
+                           <td>
+                                <a href="@Url.RouteUrl("ver_vehiculo", new { id = item.Id })" title="Detalle Combustible"><span class="glyphicon glyphicon-eye-open"></span></a>
+                                <a href="@Url.RouteUrl("editar_vehiculo", new { id = item.Id })" title="Editar Combustible"><span class="glyphicon glyphicon-edit"></a>
+                                <a href="#" title="Vehiculos"><span class="glyphicon glyphicon-road"></a>
                             </td>
                         </tr>   
                     }
-                    <tr>
-                        <td>1</td>
-                        <td>Bencina</td>
-                        <td>
-                            <a href="#" title="Detalle Combustible"><span class="glyphicon glyphicon-eye-open"></span></a>
-                            <a href="#" title="Editar Combustible"><span class="glyphicon glyphicon-edit"></a>
-                            <a href="#" title="Vehiculos"><span class="glyphicon glyphicon-road"></a>
-                        </td>
-                    </tr>   
-                    <tr>
-                        <td>2</td>
-                        <td>Petróleo</td>
-                        <td>
-                            <a href="#" title="Detalle Combustible"><span class="glyphicon glyphicon-eye-open"></span></a>
-                            <a href="#" title="Editar Combustible"><span class="glyphicon glyphicon-edit"></a>
-                            <a href="#" title="Vehiculos"><span class="glyphicon glyphicon-road"></a>
-                        </td>
-                    </tr>
                 </tbody>
             </table>   
         </div>

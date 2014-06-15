@@ -313,7 +313,7 @@ namespace VelosCar
 
             //actualizar usuarios
             routes.MapRoute(
-                name: "actualizae_usuario",
+                name: "actualizar_usuario",
                 url: "usuarios/{id}",
                 defaults: new { controller = "Usuario", action = "Actualizar" },
                 constraints: new { httpMethod = new HttpMethodConstraint(new string[] { "POST" }) }
@@ -442,7 +442,7 @@ namespace VelosCar
                 constraints: new { httpMethod = new HttpMethodConstraint(new string[] { "GET" }) }
             );
 
-            //registrar sucursales
+            //crear sucursales
             routes.MapRoute(
                 name: "crear_sucursal",
                 url: "sucursales/crear",
@@ -450,12 +450,36 @@ namespace VelosCar
                 constraints: new { httpMethod = new HttpMethodConstraint(new string[] { "POST" }) }
             );
 
-            //registrar sucursales
+            //editar sucursales
             routes.MapRoute(
                 name: "editar_sucursal",
                 url: "sucursales/{id}/editar",
-                defaults: new { controller = "Sucursal", action = "Crear" },
+                defaults: new { controller = "Sucursal", action = "Editar" },
+                constraints: new { httpMethod = new HttpMethodConstraint(new string[] { "GET" }) }
+            );
+
+            //vehiculos sucursal
+            routes.MapRoute(
+                name: "vehiculos_sucursal",
+                url: "sucursales/{id}/vehiculos",
+                defaults: new { controller = "Sucursal", action = "VerVehiculos" },
+                constraints: new { httpMethod = new HttpMethodConstraint(new string[] { "GET" }) }
+            );
+
+            //registrar sucursales
+            routes.MapRoute(
+                name: "actualizar_sucursal",
+                url: "sucursales/{id}",
+                defaults: new { controller = "Sucursal", action = "Actualizar" },
                 constraints: new { httpMethod = new HttpMethodConstraint(new string[] { "POST" }) }
+            );
+
+            //registrar sucursales
+            routes.MapRoute(
+                name: "ver_sucursal",
+                url: "sucursales/{id}",
+                defaults: new { controller = "Sucursal", action = "Ver" },
+                constraints: new { httpMethod = new HttpMethodConstraint(new string[] { "GET" }) }
             );
             //rutas de los informes estadisticos
         }
