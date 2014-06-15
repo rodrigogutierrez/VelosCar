@@ -426,9 +426,38 @@ namespace VelosCar
             );
 
             //rutas de las sucursales
-            //rutas de los informes estadisticos
-            //rutas de los informes
+            //listar sucursales
+            routes.MapRoute(
+                name: "sucursales",
+                url: "sucursales",
+                defaults: new { controller = "Sucursal", action = "Index" },
+                constraints: new { httpMethod = new HttpMethodConstraint(new string[] { "GET" }) }
+            );
 
+            //registrar sucursales
+            routes.MapRoute(
+                name: "registrar_sucursal",
+                url: "sucursales/registrar",
+                defaults: new { controller = "Sucursal", action = "Registrar" },
+                constraints: new { httpMethod = new HttpMethodConstraint(new string[] { "GET" }) }
+            );
+
+            //registrar sucursales
+            routes.MapRoute(
+                name: "crear_sucursal",
+                url: "sucursales/crear",
+                defaults: new { controller = "Sucursal", action = "Crear" },
+                constraints: new { httpMethod = new HttpMethodConstraint(new string[] { "POST" }) }
+            );
+
+            //registrar sucursales
+            routes.MapRoute(
+                name: "editar_sucursal",
+                url: "sucursales/{id}/editar",
+                defaults: new { controller = "Sucursal", action = "Crear" },
+                constraints: new { httpMethod = new HttpMethodConstraint(new string[] { "POST" }) }
+            );
+            //rutas de los informes estadisticos
         }
     }
 }
