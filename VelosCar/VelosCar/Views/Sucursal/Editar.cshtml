@@ -2,41 +2,42 @@
 
 <div class="row">
     <div class="col-lg-6 col-lg-offset-3">
-        <form class="form-horizontal" method="post" action="@Url.RouteUrl("actualizar_sucursal")">
-        <div class="input-group bg">
-            <span class="input-group-addon">Nombre</span>
-            <input type="text" class="form-control bg" name="Nombre" value="">
-        </div><!--Fin input-group-->
+        <form class="form-horizontal" method="post" action="@Url.RouteUrl("actualizar_sucursal", new { id = Model.Id})">
+            <input type="hidden" name="Id" value="@Model.Id" />
+            <div class="input-group bg">
+                <span class="input-group-addon">Nombre</span>
+                <input type="text" class="form-control bg" name="Nombre" value="@Model.Nombre">
+            </div><!--Fin input-group-->
         
-        <div class="input-group bg">
-            <span class="input-group-addon">Direccion</span>
-            <input type="text" class="form-control bg" name="Direccion" value="">
-        </div><!--Fin input-group-->
+            <div class="input-group bg">
+                <span class="input-group-addon">Direccion</span>
+                <input type="text" class="form-control bg" name="Direccion" value="@Model.Direccion">
+            </div><!--Fin input-group-->
         
-        <div class="input-group bg">
-            <span class="input-group-addon">Comuna</span>
-            <input type="text" class="form-control bg" name="Comuna" value="">
-        </div><!--Fin input-group-->
+            <div class="input-group bg">
+                <span class="input-group-addon">Comuna</span>
+                <input type="text" class="form-control bg" name="Comuna" value="@Model.Comuna" />
+            </div><!--Fin input-group-->
         
-        <div class="input-group bg">
-            <span class="input-group-addon">Region</span>
-            <input type="text" class="form-control bg" name="Region" value="">
-        </div><!--Fin input-group-->
+            <div class="input-group bg">
+                <span class="input-group-addon">Region</span>
+                <input type="text" class="form-control bg" name="Region" value="@Model.Region"/>
+            </div><!--Fin input-group-->
 
-        <div class="input-group bg">
-            <span class="input-group-addon">Hora Inicio Atencion</span>
-            <input type="time" class="form-control bg" name="HoraInicioAtencion" value="">
-        </div><!--Fin input-group-->
+            <div class="input-group bg">
+                <span class="input-group-addon">Hora Inicio Atencion</span>
+                <input type="time" class="form-control bg" name="HoraInicioAtencion" value="@Model.HoraInicioAtencion.ToString("hh':'mm")"/>
+            </div><!--Fin input-group-->
 
-        <div class="input-group bg">
-            <span class="input-group-addon">Hora Inicio Atencion</span>
-            <input type="time" class="form-control bg" name="HoraTerminaAtencion" value="">
-        </div><!--Fin input-group-->
+            <div class="input-group bg">
+                <span class="input-group-addon">Hora Inicio Atencion</span>
+                <input type="time-local" class="form-control bg" name="HoraTerminaAtencion" value="@Model.HoraTerminaAtencion.ToString("hh':'mm")"/>
+            </div><!--Fin input-group-->
 
-        <div class="form-actions">
-            <button type="submit" class="btn btn-primary">Registrar</button>
-            <button type="reset" class="btn">Limpiar</button>
-        </div>
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Actualizar</button>
+                <button type="reset" class="btn">Limpiar</button>
+            </div>
         </form><!--Fin form-->
     </div>
 </div><!--Fin row-->

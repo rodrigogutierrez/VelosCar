@@ -1,0 +1,50 @@
+﻿@model VelosCar.Models.Usuario
+
+<div class="row">
+    <div class="col-lg-6 col-lg-offset-3">
+        <form class="form-horizontal">
+            <div class="input-group bg">
+                <span class="input-group-addon">Rut / Pasaporte</span>
+                <input type="text" class="form-control bg" name="RutPasaporte" value="@Model.RutPasaporte" disabled="disabled">
+            </div><!--Fin input-group-->
+            <div class="input-group bg">
+                <span class="input-group-addon">Nombres</span>
+                <input type="text" class="form-control bg" name="Nombres" value="@Model.Nombres" disabled="disabled">
+            </div><!--Fin input-group-->
+        
+            <div class="input-group bg">
+                <span class="input-group-addon">Apellido Paterno</span>
+                <input type="text" class="form-control bg" name="ApellidoPaterno" value="@Model.ApellidoPaterno" disabled="disabled">
+            </div><!--Fin input-group-->
+        
+            <div class="input-group bg">
+                <span class="input-group-addon">Apellido Materno</span>
+                <input type="text" class="form-control bg" name="ApellidoMaterno" value="@Model.ApellidoMaterno" disabled="disabled">
+            </div><!--Fin input-group-->
+        
+            <div class="input-group bg">
+                <span class="input-group-addon">Email</span>
+                <input type="text" class="form-control bg" name="Email" value="@Model.Email" disabled="disabled">
+            </div><!--Fin input-group-->
+
+            <div class="input-group bg">
+                <span class="input-group-addon">País</span>
+                <input type="text" class="form-control bg" name="Pais" value="@Model.Pais" disabled="disabled">
+            </div><!--Fin input-group-->
+
+            <div class="input-group bg">
+                <span class="input-group-addon">Hora Inicio Atencion</span>
+                <input type="tel" class="form-control bg" name="Telefono" value="@Model.Telefono" disabled="disabled">
+            </div><!--Fin input-group-->
+            <div class="input-group bg">
+                <span class="input-group-addon">Contraseña</span>
+                <input type="text" class="form-control bg" name="Contrasena" value="@Model.Contrasena" disabled="disabled">
+            </div><!--Fin input-group-->
+
+            <div class="input-group bg">
+                <span class="input-group-addon">Estado</span>
+                <input type="text" class="form-control bg" name="Estado" value="@Model.Estado" disabled="disabled">
+            </div><!--Fin input-group-->
+        </form><!--Fin form-->
+    </div>
+</div><!--Fin row-->

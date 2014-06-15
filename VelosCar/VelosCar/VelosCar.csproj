@@ -264,6 +264,11 @@
     <Content Include="Views\Sucursal\Index.cshtml" />
     <Content Include="Views\Sucursal\Registrar.cshtml" />
     <Content Include="Views\Sucursal\Editar.cshtml" />
+    <Content Include="Views\Sucursal\Ver.cshtml" />
+    <Content Include="Views\Usuario\Index.cshtml" />
+    <Content Include="Views\Usuario\Ver.cshtml" />
+    <Content Include="Views\Usuario\Editar.cshtml" />
+    <Content Include="Views\Usuario\Registrar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

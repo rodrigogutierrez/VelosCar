@@ -1,0 +1,37 @@
+﻿@model VelosCar.Models.Sucursal
+
+<div class="row">
+    <div class="col-lg-6 col-lg-offset-3">
+        <form class="form-horizontal">
+        <div class="input-group bg">
+            <span class="input-group-addon">Nombre</span>
+            <input type="text" class="form-control bg" name="Nombre" value="@Model.Nombre" disabled="disabled">
+        </div><!--Fin input-group-->
+        
+        <div class="input-group bg">
+            <span class="input-group-addon">Direccion</span>
+            <input type="text" class="form-control bg" name="Direccion" value="@Model.Direccion" disabled="disabled">
+        </div><!--Fin input-group-->
+        
+        <div class="input-group bg">
+            <span class="input-group-addon">Comuna</span>
+            <input type="text" class="form-control bg" name="Comuna" value="@Model.Comuna" disabled="disabled">
+        </div><!--Fin input-group-->
+        
+        <div class="input-group bg">
+            <span class="input-group-addon">Region</span>
+            <input type="text" class="form-control bg" name="Region" value="@Model.Region" disabled="disabled">
+        </div><!--Fin input-group-->
+
+        <div class="input-group bg">
+            <span class="input-group-addon">Hora Inicio Atencion</span>
+            <input type="time-local" class="form-control bg" name="HoraInicioAtencion" value="@Model.HoraInicioAtencion.ToString("hh':'mm")" disabled="disabled">
+        </div><!--Fin input-group-->
+
+        <div class="input-group bg">
+            <span class="input-group-addon">Hora Inicio Atencion</span>
+            <input type="time-local" class="form-control bg" name="HoraTerminaAtencion" value="@Model.HoraTerminaAtencion.ToString("hh':'mm")" disabled="disabled">
+        </div><!--Fin input-group-->
+        </form><!--Fin form-->
+    </div>
+</div><!--Fin row-->
